@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Burbank Big Condensed Black';
+	src: url(/assets/fonts/Burbank-Big-Condensed-Black.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Burbank Big Condensed Bold';
+	src: url(/assets/fonts/Burbank-Big-Condensed-Bold.ttf);
+}
+
+:root {
+	--clr-primary: #f3af19;
+	--clr-bg: #212529;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--clr-primary);
+	border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+	border: 1px solid black;
+}
+
+body {
+	background: var(--clr-bg);
+	background-image: radial-gradient(black 2px, transparent 0);
+	background-size: 40px 40px;
+	color: white;
+}
+
+.primary_button {
+	@apply font-burbank-black border-none px-4 rounded-lg text-2xl outline outline-2 -outline-offset-1 enabled:outline-primary-gold disabled:outline-black 
+	enabled:animate-primary-not-hover enabled:hover:animate-primary-hover text-primary-gray disabled:cursor-wait 
+	disabled:bg-gray-500;
+}
+
+.card_bg {
+	box-shadow: 0 0 6px 0.5px black;
+	background: rgba(0, 0, 0, 0.24);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6.3px);
+	-webkit-backdrop-filter: blur(6.3px);
+	border: 1px solid rgba(0, 0, 0, 0.56);
+}
+
+.error_notification_bg {
+	background: rgba(143, 4, 4, 0.71);
+	border-radius: 8px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.5px);
+	-webkit-backdrop-filter: blur(5.5px);
+	border: 1px solid rgba(143, 4, 4, 0.51);
+}
+
+.outline-black {
+	text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px,
+		rgb(0, 0, 0) -0.416147px 0.909297px 0px,
+		rgb(0, 0, 0) -0.989992px 0.14112px 0px,
+		rgb(0, 0, 0) -0.653644px -0.756802px 0px,
+		rgb(0, 0, 0) 0.283662px -0.958924px 0px,
+		rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
