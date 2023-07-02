@@ -1,9 +1,8 @@
 import '@styles/globals.css'
 import React from 'react'
-import Nav from '@components/Nav'
+import MainNav from '@components/main-nav'
 
 export const metadata = {
-	name: 'forStat',
 	title: 'forStat',
 	description:
 		'This site provides information about Fortnite. The information includes latest news, item shops, account statistics and much more',
@@ -17,7 +16,7 @@ const RootLayout = ({ children }) => {
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 			</head>
 			<body className='max-w-screen'>
-				<Nav />
+				<MainNav />
 				{children}
 			</body>
 		</html>

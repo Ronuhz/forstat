@@ -1,12 +1,12 @@
 'use client'
 
-import { getStatsFromApi } from '@utils/ServerFunction'
+import { getStatsFromApi } from '@utils/ServerActions'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Section from '@components/stat/Section'
-import { ErrorNotification } from '@components/Notifications'
+import Section from '@components/stat/section'
+import { ErrorNotification } from '@components/notifications'
 
-const Client = () => {
+const Stats = () => {
 	const [playerStats, setPlayerStats] = useState()
 	const [searchInfo, setSearchInfo] = useState({
 		username: '',
@@ -81,4 +81,4 @@ const Client = () => {
 	)
 }
 
-export default Client
+export default Stats
