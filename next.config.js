@@ -4,7 +4,7 @@ const nextConfig = {
 		serverActions: true,
 	},
 	images: {
-		domains: ['media.fortniteapi.io'],
+		domains: ['media.fortniteapi.io', 'cdn-live.prm.ol.epicgames.com'],
 	},
 }
 

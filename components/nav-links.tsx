@@ -3,7 +3,12 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-const DesktopLink = ({ href, children }) => {
+interface DesktopLinkProps {
+	href: string
+	children: React.ReactNode
+}
+
+const DesktopLink = ({ href, children }: DesktopLinkProps) => {
 	const currentRoute = usePathname()
 	const isActive = currentRoute === href
 
@@ -19,7 +24,13 @@ const DesktopLink = ({ href, children }) => {
 	)
 }
 
-const MobileLink = ({ href, children, toggleMobileNav }) => {
+interface MobileLinkProps {
+	href: string
+	children: React.ReactNode
+	toggleMobileNav: (value: boolean) => void
+}
+
+const MobileLink = ({ href, children, toggleMobileNav }: MobileLinkProps) => {
 	const currentRoute = usePathname()
 	const isActive = currentRoute === href
 

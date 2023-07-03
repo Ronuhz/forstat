@@ -1,5 +1,16 @@
 import Image from 'next/image'
 
+interface CardProps {
+	tabTitle: string
+	name: string
+	description: string
+	additionalDescription: string
+	icon: string
+	added: {
+		date: string
+	}
+}
+
 const Card = ({
 	tabTitle,
 	name,
@@ -7,7 +18,7 @@ const Card = ({
 	additionalDescription,
 	icon,
 	added,
-}) => {
+}: CardProps) => {
 	return (
 		<div className='sm:flex-row flex-col sm:w-[600px] w-[300px] sm:h-[280px] h-auto rounded-lg card_bg flex items-center justify-start p-1'>
 			<Image
@@ -15,7 +26,7 @@ const Card = ({
 				height={136}
 				width={136}
 				alt='Augment Icon'
-				className='ml-3 border-none bg-transparent sm:m-0 m-4'
+				className='ml-3 border-none bg-transparent sm:m-0 m-4 hover:scale-105 transition-all'
 			/>
 			<div className='h-full w-full flex flex-col items-center justify-start p-3'>
 				<p className='font-burbank-black outline-black text-3xl tracking-[1px] pb-1'>

@@ -4,7 +4,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const ErrorNotification = ({ error }) => {
+const ErrorNotification = ({ error }: { error: string }) => {
 	return (
 		<motion.div
 			className='mt-4 flex items-center justify-center outline-black font-burbank-black'

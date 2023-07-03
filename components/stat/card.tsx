@@ -1,3 +1,18 @@
+interface CardProps {
+	gamemode: string
+	placetop1: number
+	kd: number
+	winrate: number
+	placetop3: number
+	placetop5: number
+	placetop6: number
+	placetop10: number
+	placetop12: number
+	placetop25: number
+	kills: number
+	matchesplayed: number
+}
+
 const Card = ({
 	placetop1,
 	kd,
@@ -11,7 +26,7 @@ const Card = ({
 	kills,
 	matchesplayed,
 	gamemode,
-}) => {
+}: CardProps) => {
 	return (
 		<div className='min-w-16 min-h-20 p-4 rounded-2xl card_bg leading-none'>
 			<div
@@ -43,7 +58,13 @@ const Card = ({
 	)
 }
 
-const InfoLine = ({ value, children }) => {
+const InfoLine = ({
+	value,
+	children,
+}: {
+	value: number | string
+	children: React.ReactNode
+}) => {
 	return (
 		<div
 			className='flex items-center justify-between gap-4 my-1 mx-2 

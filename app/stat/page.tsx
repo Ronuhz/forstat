@@ -1,13 +1,14 @@
 'use client'
 
 import { getStatsFromApi } from '@utils/ServerActions'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import Section from '@components/stat/section'
 import { ErrorNotification } from '@components/notifications'
+import { PlayerStatsProps } from '@types'
 
 const Stats = () => {
-	const [playerStats, setPlayerStats] = useState()
+	const [playerStats, setPlayerStats] = useState<PlayerStatsProps>()
 	const [searchInfo, setSearchInfo] = useState({
 		username: '',
 	})
@@ -24,7 +25,7 @@ const Stats = () => {
 		}
 
 		setError('') // clears the active error (of there is any)
-		setPlayerStats() // clears the previously searched stats
+		setPlayerStats(undefined) // clears the previously searched stats
 		setLoading(true)
 
 		const response = await getStatsFromApi(username)
@@ -41,7 +42,7 @@ const Stats = () => {
 		setLoading(false)
 	}
 
-	const handleChange = (event) => {
+	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = event.target
 
 		setSearchInfo((prev) => ({
