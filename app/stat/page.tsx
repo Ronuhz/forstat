@@ -5,9 +5,10 @@ import { ChangeEvent, useState } from 'react'
 import { motion } from 'framer-motion'
 import Section from '@components/stat/section'
 import { ErrorNotification } from '@components/notifications'
+import { PlayerStatsProps } from '@types'
 
 const Stats = () => {
-	const [playerStats, setPlayerStats] = useState<object | undefined>()
+	const [playerStats, setPlayerStats] = useState<PlayerStatsProps>()
 	const [searchInfo, setSearchInfo] = useState({
 		username: '',
 	})
