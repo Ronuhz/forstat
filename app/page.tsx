@@ -1,14 +1,27 @@
-import { redirect } from 'next/navigation'
+import Card from '@components/news/card'
+import { getBRNewsFromApi } from '@utils/ServerActions'
 
-const Home = () => {
-	// TODO: Make some sort of a Home page
+const News = async () => {
+	const newsData = await getBRNewsFromApi()
 
-	// redirect('/stat')
 	return (
-		<div className='text-center mt-5 text-4xl font-burbank-black uppercase tracking-wide'>
-			home
-		</div>
+		<main className='p-8'>
+			<h2 className='outline-black font-burbank-black text-4xl sm:text-5xl md:text-6xl pb-6 lg:px-10'>
+				Battle Royale News
+			</h2>
+			<section className='w-full h-full text-2xl flex flex-wrap gap-6 items-stretch lg:justify-center justify-start'>
+				{newsData.news.map((item) => (
+					<Card
+						key={item.id}
+						title={item.title}
+						body={item.body}
+						image={item.image}
+						live={item.live}
+					/>
+				))}
+			</section>
+		</main>
 	)
 }
 
-export default Home
+export default News

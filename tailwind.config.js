@@ -12,6 +12,7 @@ module.exports = {
 				'primary-gray': '#212529',
 			},
 			fontFamily: {
+				satoshi: ['Satoshi', 'sans-serif'],
 				'burbank-black': ['Burbank Big Condensed Black', 'sans-serif'],
 				'burbank-bold': ['Burbank Big Condensed Bold', 'sans-serif'],
 			},

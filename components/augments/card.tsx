@@ -26,7 +26,7 @@ const Card = ({
 				height={136}
 				width={136}
 				alt='Augment Icon'
-				className='ml-3 border-none bg-transparent sm:m-0 m-4'
+				className='ml-3 border-none bg-transparent sm:m-0 m-4 hover:scale-105 transition-all'
 			/>
 			<div className='h-full w-full flex flex-col items-center justify-start p-3'>
 				<p className='font-burbank-black outline-black text-3xl tracking-[1px] pb-1'>
