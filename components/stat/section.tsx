@@ -1,6 +1,7 @@
 import Card from './card'
+import { SectionProps } from '@types'
 
-const Section = ({ playerStats }) => {
+const Section = ({ playerStats }: SectionProps) => {
 	const playedSolo = playerStats?.global_stats.hasOwnProperty('solo')
 	const playedDuo = playerStats?.global_stats.hasOwnProperty('duo')
 	const playedTrio = playerStats?.global_stats.hasOwnProperty('trio')

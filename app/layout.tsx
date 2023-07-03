@@ -8,7 +8,7 @@ export const metadata = {
 		'This site provides information about Fortnite. The information includes latest news, item shops, account statistics and much more',
 }
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang='en'>
 			<head>
