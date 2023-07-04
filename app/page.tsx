@@ -1,5 +1,22 @@
 import Card from '@components/news/card'
-import { getBRNewsFromApi } from '@utils/ServerActions'
+import { News } from '@types'
+
+const getBRNewsFromApi = async (): Promise<News> => {
+	const headers: HeadersInit = {}
+
+	if (process.env.FORTNITEIO_API_KEY) {
+		headers['Authorization'] = process.env.FORTNITEIO_API_KEY
+	}
+
+	const response = await fetch(
+		'https://fortniteapi.io/v1/news?lang=en&type=br',
+		{
+			headers,
+		}
+	)
+
+	return response.json()
+}
 
 const News = async () => {
 	const newsData = await getBRNewsFromApi()

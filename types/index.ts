@@ -1,3 +1,27 @@
+export interface News {
+	news: {
+		id: string
+		title: string
+		body: string
+		image: string
+		live: boolean
+	}[]
+}
+
+export interface Augments {
+	augments: {
+		id: string
+		tabTitle: string
+		name: string
+		description: string
+		additionalDescription: string
+		icon: string
+		added: {
+			date: string
+		}
+	}[]
+}
+
 export type SectionProps = {
 	playerStats: {
 		name: string
