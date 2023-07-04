@@ -4,7 +4,7 @@
 
 @font-face {
 	font-family: 'Burbank Big Condensed Black';
-	src: url(/assets/fonts/Burbank-Big-Condensed-Black.ttf) format('truetype');
+	src: url(/assets/fonts/Burbank-Big-Condensed-Black.ttf);
 }
 
 @font-face {
@@ -12,29 +12,19 @@
 	src: url(/assets/fonts/Burbank-Big-Condensed-Bold.ttf);
 }
 
-:root {
-	--clr-primary: #f3af19;
-	--clr-bg: #212529;
-}
-
 ::-webkit-scrollbar {
 	width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--clr-primary);
+	background-color: theme('colors.primary-gold');
 	border-radius: 12px;
 }
 
-::-webkit-scrollbar-track {
-	border: 1px solid black;
-}
-
 body {
-	background: var(--clr-bg);
 	background-image: radial-gradient(black 2px, transparent 0);
-	background-size: 40px 40px;
-	color: white;
+	background-position: 6px 0px;
+	background-size: 30px 30px;
 }
 
 .primary_button {

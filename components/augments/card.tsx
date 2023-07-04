@@ -20,7 +20,7 @@ const Card = ({
 	added,
 }: CardProps) => {
 	return (
-		<div className='sm:flex-row flex-col sm:w-[600px] w-[300px] sm:h-[280px] h-auto rounded-lg card_bg flex items-center justify-start p-1'>
+		<div className='sm:flex-row flex-col sm:w-[600px] w-[300px] rounded-lg card_bg flex items-center justify-start p-1'>
 			<Image
 				src={icon}
 				height={136}
