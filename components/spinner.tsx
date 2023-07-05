@@ -1,6 +1,4 @@
-import React from 'react'
-
-const loading = () => {
+const Spinner = () => {
 	return (
 		<div className='w-full flex justify-center items-center'>
 			<div
@@ -11,4 +9,4 @@ const loading = () => {
 	)
 }
 
-export default loading
+export default Spinner

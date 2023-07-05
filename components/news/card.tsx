@@ -15,7 +15,7 @@ const Card = ({ title, body, image, live }: CardProp) => {
 				height={720}
 				width={1280}
 				alt='news_image'
-				className='md:w-[20rem] lg:w-[40rem] rounded-lg shadow-md hover:shadow-2xl shadow-black lg:hover:scale-[1.03] lg:hover:-translate-y-1 transition-all'
+				className='md:w-[20rem] lg:w-[40rem] rounded-lg shadow-md lg:hover:shadow-2xl shadow-black lg:hover:scale-[1.03] lg:hover:-translate-y-1 transition-all'
 			/>
 			<div className='h-full w-full flex flex-col items-start justify-between'>
 				<div>

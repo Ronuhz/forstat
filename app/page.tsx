@@ -1,17 +1,14 @@
 import Card from '@components/news/card'
 import { News } from '@types'
+import apiKeys from '@config/apiKeys'
 
 const getBRNewsFromApi = async (): Promise<News> => {
-	const headers: HeadersInit = {}
-
-	if (process.env.FORTNITEIO_API_KEY) {
-		headers['Authorization'] = process.env.FORTNITEIO_API_KEY
-	}
-
 	const response = await fetch(
 		'https://fortniteapi.io/v1/news?lang=en&type=br',
 		{
-			headers,
+			headers: {
+				Authorization: apiKeys.fortniteioAPI,
+			},
 		}
 	)
 

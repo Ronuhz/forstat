@@ -1,17 +1,12 @@
 import Card from '@components/augments/card'
 import { Augments } from '@types'
+import apiKeys from '@config/apiKeys'
 
 const getAugmentsFromApi = async (): Promise<Augments> => {
-	const headers: HeadersInit = {
-		cache: 'force-cache',
-	}
-
-	if (process.env.FORTNITEIO_API_KEY) {
-		headers['Authorization'] = process.env.FORTNITEIO_API_KEY
-	}
-
 	const response = await fetch('https://fortniteapi.io/v1/game/augments', {
-		headers,
+		headers: {
+			Authorization: apiKeys.fortniteioAPI,
+		},
 	})
 
 	const data = await response.json()
@@ -28,7 +23,6 @@ const Augments = async () => {
 					<Card key={item.id} {...item} />
 				))}
 			</div>
-			<pre>{JSON.stringify(augments, null, 2)}</pre>
 		</div>
 	)
 }
