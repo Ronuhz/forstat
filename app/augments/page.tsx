@@ -17,7 +17,7 @@ const Augments = async () => {
 
 	return (
 		<div className='flex flex-col items-center justify-center'>
-			<p className='font-burbank-black text-5xl p-5'>Augments</p>
+			<p className='font-burbank text-5xl p-5'>Augments</p>
 			<div className='flex items-stretch justify-center flex-wrap-reverse gap-7 m-3 pb-8'>
 				{augments.map((item) => (
 					<Card key={item.id} {...item} />

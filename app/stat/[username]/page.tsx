@@ -3,8 +3,6 @@ import Section from '@components/stat/section'
 import apiKeys from '@config/apiKeys'
 
 const getStats = async (username: string) => {
-	if (username === 'favicon.ico') return { error: 'This query is now allowed' }
-
 	const response = await fetch(
 		`https://fortniteapi.io/v1/stats?username=${username}`,
 		{

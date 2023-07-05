@@ -34,7 +34,7 @@ const StatSearchForm = () => {
 				required
 				value={searchInfo.username}
 				onChange={handleChange}
-				className='font-burbank-black bg-gray-100 text-gray-600 placeholder:text-gray-500
+				className='font-burbank bg-gray-100 text-gray-600 placeholder:text-gray-500
 					border-none p-1 rounded-lg text-xl'
 			/>
 			<button type='submit' className='primary_button'>

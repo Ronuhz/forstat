@@ -19,11 +19,12 @@ const News = async () => {
 	const newsData = await getBRNewsFromApi()
 
 	return (
-		<main className='p-8'>
-			<h2 className='outline-black font-burbank-black text-4xl sm:text-5xl md:text-6xl pb-6 lg:px-10'>
+		<main className='pt-8 p-4'>
+			<h2 className='text-center outline-black font-burbank text-xl md:text-3xl pb-1'>
 				Battle Royale News
 			</h2>
-			<section className='w-full h-full text-2xl flex flex-wrap gap-6 items-stretch lg:justify-center justify-start'>
+			{/* <section className='w-full h-full text-2xl flex flex-wrap gap-6 items-stretch lg:justify-center justify-start'> */}
+			<section className='w-full h-full flex flex-wrap lg:gap-6 gap-3 flex-shrink items-stretch flex-row-reverse justify-center'>
 				{newsData.news.map((item) => (
 					<Card
 						key={item.id}

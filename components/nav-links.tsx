@@ -25,7 +25,7 @@ const DesktopLink = ({ href, children }: DesktopLinkProps) => {
 
 	return (
 		<li className='flex items-center justify-center'>
-			<Link href={href} className='p-1 tracking-widest outline-black'>
+			<Link href={href} className=' outline-black'>
 				{children}
 				<div
 					className={isActive ? 'rounded border-b-2 border-primary-gold' : ''}
@@ -49,7 +49,7 @@ const MobileLink = ({ href, children, toggleMobileNav }: MobileLinkProps) => {
 		<Link
 			href={href}
 			onClick={() => toggleMobileNav(false)}
-			className={`text-3xl tracking-widest outline-black ${
+			className={`text-2xl outline-black ${
 				isActive ? 'text-primary-gold' : ''
 			}`}
 		>

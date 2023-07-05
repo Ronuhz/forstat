@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Burbank Big Condensed Black';
-	src: url(/assets/fonts/Burbank-Big-Condensed-Black.ttf);
+	font-family: 'Burbank Big Regular';
+	src: url(/assets/fonts/BurbankBigRegular-Black.woff2);
 }
 
 @font-face {
-	font-family: 'Burbank Big Condensed Bold';
-	src: url(/assets/fonts/Burbank-Big-Condensed-Bold.ttf);
+	font-family: 'Burbank Small Black';
+	src: url(/assets/fonts/BurbankSmall-Black.woff2);
 }
 
 ::-webkit-scrollbar {
-	width: 6px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -28,7 +28,7 @@ body {
 }
 
 .primary_button {
-	@apply font-burbank-black border-none px-4 rounded-lg text-2xl outline outline-2 -outline-offset-1 enabled:outline-primary-gold disabled:outline-black 
+	@apply font-burbank border-none px-4 rounded-lg text-2xl outline outline-2 -outline-offset-1 enabled:outline-primary-gold disabled:outline-black 
 	enabled:animate-primary-not-hover enabled:hover:animate-primary-hover text-primary-gray disabled:cursor-wait 
 	disabled:bg-gray-500;
 }

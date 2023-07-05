@@ -2,7 +2,7 @@
 
 const error = ({ error, reset }: { error: Error; reset: () => void }) => {
 	return (
-		<div className='flex flex-col items-center justify-center overflow-hidden mt-40 font-burbank-black outline-black'>
+		<div className='flex flex-col items-center justify-center overflow-hidden mt-40 font-burbank outline-black'>
 			<h1 className='text-center text-5xl text-red-600'>
 				Something went wrong!
 			</h1>

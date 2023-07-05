@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 const ErrorNotification = ({ error }: { error: string }) => {
 	return (
 		<motion.div
-			className='mt-4 flex items-center justify-center outline-black font-burbank-black'
+			className='mt-4 flex items-center justify-center outline-black font-burbank'
 			animate={{ opacity: [0, 1], y: [-50, 0] }}
 		>
 			<div className='error_notification_bg flex items-center justify-between min-w-16 min-h-fit p-2 gap-2 m-0'>

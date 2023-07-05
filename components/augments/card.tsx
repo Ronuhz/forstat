@@ -1,15 +1,5 @@
 import Image from 'next/image'
-
-interface CardProps {
-	tabTitle: string
-	name: string
-	description: string
-	additionalDescription: string
-	icon: string
-	added: {
-		date: string
-	}
-}
+import { AugmentCardProps } from '@types'
 
 const Card = ({
 	tabTitle,
@@ -18,7 +8,7 @@ const Card = ({
 	additionalDescription,
 	icon,
 	added,
-}: CardProps) => {
+}: AugmentCardProps) => {
 	return (
 		<div className='sm:flex-row flex-col sm:w-[600px] w-[300px] rounded-lg card_bg flex items-center justify-start p-1'>
 			<Image
@@ -29,18 +19,16 @@ const Card = ({
 				className='ml-3 border-none bg-transparent sm:m-0 m-4 hover:scale-105 transition-all'
 			/>
 			<div className='h-full w-full flex flex-col items-center justify-start p-3'>
-				<p className='font-burbank-black outline-black text-3xl tracking-[1px] pb-1'>
-					{name}
-				</p>
-				<p className='text-primary-gold font-burbank-black text-xl pb-2'>
+				<p className='font-burbank outline-black text-3xl pb-1'>{name}</p>
+				<p className='text-primary-gold font-burbank text-xl pb-2'>
 					{tabTitle}
 				</p>
-				<div className='w-full flex flex-col items-start justify-center font-burbank-bold text-2xl pb-4'>
+				<div className='w-full flex flex-col items-start justify-center font-satoshi text-md text-gray-300 pb-4'>
 					<p>{description}</p>
 					<p>{additionalDescription}</p>
 				</div>
 				<div className='h-full w-full flex flex-col sm:items-end items-center sm:justify-end justify-center'>
-					<p className='font-burbank-bold text-xl tracking-[1px]'>
+					<p className='font-burbank-small-black text-xl outline-black'>
 						Released on <span className='text-primary-gold'>{added.date}</span>
 					</p>
 				</div>

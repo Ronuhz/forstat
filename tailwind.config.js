@@ -13,8 +13,8 @@ module.exports = {
 			},
 			fontFamily: {
 				satoshi: ['Satoshi', 'sans-serif'],
-				'burbank-black': ['Burbank Big Condensed Black', 'sans-serif'],
-				'burbank-bold': ['Burbank Big Condensed Bold', 'sans-serif'],
+				burbank: ['Burbank Big Regular', 'sans-serif'],
+				'burbank-small-black': ['Burbank Big Regular', 'sans-serif'],
 			},
 			minWidth: {
 				16: '16rem',

@@ -8,11 +8,11 @@ import MobileNav from './nav-mobile'
 
 const MainNav = () => {
 	return (
-		<nav className='bg-primary-gray shadow-md flex justify-between items-center gap-8 py-2 px-4 font-burbank-black'>
+		<nav className=' bg-primary-gray shadow-md shadow-stone-900 flex justify-between items-center gap-8 py-1 px-4 font-burbank'>
 			<Logo />
 
 			{/* Desktop Navigation */}
-			<ul className='sm:flex hidden p-0 m-0 gap-4 text-xl'>
+			<ul className='sm:flex hidden gap-4 text-xl'>
 				{NavLinks.map((item) => {
 					return (
 						<DesktopLink key={`desktop-${item.key}`} href={item.href}>
@@ -32,13 +32,11 @@ const Logo = () => {
 	return (
 		<Link href='/' className='z-50'>
 			{/* Desktop */}
-			<p className='text-primary-gold text-4xl outline-black sm:flex hidden'>
-				forStat
-			</p>
+			<p className='sm:flex text-primary-gold text-4xl hidden'>forStat</p>
 
 			{/* Mobile */}
 			<Image
-				className='sm:hidden flex cursor-pointer shadow-sm shadow-black'
+				className='sm:hidden flex shadow-sm shadow-black'
 				src='/assets/logo.svg'
 				alt='Logo'
 				width={40}

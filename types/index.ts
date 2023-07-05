@@ -2,6 +2,24 @@ export interface ApiKeys {
 	fortniteioAPI: string
 }
 
+export interface AugmentCardProps {
+	tabTitle: string
+	name: string
+	description: string
+	additionalDescription: string
+	icon: string
+	added: {
+		date: string
+	}
+}
+
+export interface NewsCardProp {
+	title: string
+	body: string
+	image: string
+	live: boolean
+}
+
 export interface News {
 	news: {
 		id: string

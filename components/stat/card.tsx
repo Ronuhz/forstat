@@ -30,7 +30,7 @@ const Card = ({
 	return (
 		<div className='min-w-16 min-h-20 p-4 rounded-2xl card_bg leading-none'>
 			<div
-				className='font-burbank-black outline-black flex 
+				className='font-burbank outline-black flex 
             items-center justify-center uppercase '
 			>
 				<h1 className='text-primary-gold mr-auto text-3xl'>{gamemode}</h1>
@@ -68,7 +68,7 @@ const InfoLine = ({
 	return (
 		<div
 			className='flex items-center justify-between gap-4 my-1 mx-2 
-		font-burbank-black outline-black'
+		font-burbank outline-black'
 		>
 			<p className='text-3xl leading-none'>{children}</p>
 			<p className='text-primary-gold text-2xl leading-none'>{value}</p>

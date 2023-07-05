@@ -9,13 +9,13 @@ const Section = ({ playerStats }: SectionProps) => {
 	return (
 		<section className='flex flex-col items-center justify-center'>
 			<h1
-				className='outline-black font-burbank-black 
+				className='outline-black font-burbank 
 			text-center mt-10 text-5xl max-sm:text-4xl'
 			>
 				{playerStats?.name} Account Stats
 			</h1>
 			<p
-				className='outline-black font-burbank-black text-4xl 
+				className='outline-black font-burbank text-4xl 
 			max-sm:text-3xl'
 			>
 				Level{' '}
