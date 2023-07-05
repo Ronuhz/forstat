@@ -10,8 +10,8 @@ const Card = ({ title, body, image, live }: NewsCardProp) => {
 		>
 			<Image
 				src={image}
-				height={720}
-				width={1280}
+				height={243}
+				width={432}
 				alt='news_image'
 				className='w-fit rounded-lg shadow-md lg:hover:shadow-2xl shadow-black lg:hover:scale-[1.03] lg:hover:-translate-y-1 transition-all'
 			/>

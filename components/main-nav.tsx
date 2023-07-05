@@ -8,7 +8,7 @@ import MobileNav from './nav-mobile'
 
 const MainNav = () => {
 	return (
-		<nav className=' bg-primary-gray shadow-md shadow-stone-900 flex justify-between items-center gap-8 py-1 px-4 font-burbank'>
+		<nav className=' bg-primary-gray shadow-md flex justify-between items-center gap-8 py-1 px-4 font-burbank'>
 			<Logo />
 
 			{/* Desktop Navigation */}
