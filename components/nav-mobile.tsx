@@ -37,7 +37,7 @@ const MobileNav = () => {
 							transition={{
 								duration: 0.3,
 							}}
-							className='absolute flex flex-col gap-2 inset-x-0 mt-[2.5rem] bg-primary-gray drop-shadow-md justify-start items-center p-6 h-[40%] w-screen leading-loose '
+							className='absolute flex flex-col gap-2 inset-x-0 mt-[2.5rem] bg-primary-gray drop-shadow-md justify-start items-center p-6 min-h-[40%] w-full leading-loose'
 						>
 							{/* Panel Links */}
 							{NavLinks.map((item) => {

@@ -1,22 +1,16 @@
 import { ErrorNotification } from '@components/notifications'
 import Section from '@components/stat/section'
-import React, { use } from 'react'
+import apiKeys from '@config/apiKeys'
 
 const getStats = async (username: string) => {
 	if (username === 'favicon.ico') return { error: 'This query is now allowed' }
 
-	const headers: HeadersInit = {
-		cache: 'no-cache',
-	}
-
-	if (process.env.FORTNITEIO_API_KEY) {
-		headers['Authorization'] = process.env.FORTNITEIO_API_KEY
-	}
-
 	const response = await fetch(
 		`https://fortniteapi.io/v1/stats?username=${username}`,
 		{
-			headers,
+			headers: {
+				Authorization: apiKeys.fortniteioAPI,
+			},
 		}
 	)
 

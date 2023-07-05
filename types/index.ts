@@ -1,3 +1,7 @@
+export interface ApiKeys {
+	fortniteioAPI: string
+}
+
 export interface News {
 	news: {
 		id: string
